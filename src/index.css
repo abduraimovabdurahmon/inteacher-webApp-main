@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.screen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: azure;
+}
+
+.top{
+    width: 100%;
+    overflow-y: auto;
+    background-color: azure;
+}
+
+.loading-box{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-box img{
+    width: 30%;
+}
