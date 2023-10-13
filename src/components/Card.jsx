@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <>
         <div className="card-box">
@@ -10,7 +10,7 @@ const Card = () => {
                 backgroundPosition: "center",
                 backgroundSize: "cover"
                 }}></div>
-            <div className="card-title">Arab tili o'qituvchisi</div>
+            <div className="card-title">{props.title? props.title:"Arab tili o'qituvchisi"}</div>
         </div>
     </>
   );
