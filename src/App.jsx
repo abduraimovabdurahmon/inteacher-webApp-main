@@ -10,9 +10,6 @@ import Categories from "./pages/Categories";
 import "bootstrap/dist/css/bootstrap.min.css"
 import About from "./pages/About";
 
-const agent = new https.Agent({
-  rejectUnauthorized: false
-});
 
 
 
@@ -22,7 +19,11 @@ function App() {
 
   const getData = async () => {
     try {
-      const res = await axios.get(env.BACKEND_URL+"/teachers", {httpAgent: agent});
+      const res = await axios.get(env.BACKEND_URL+"/teachers", {
+        httpsAgent: new axios.https.Agent({
+          rejectUnauthorized: false
+        })
+      });
       setData(res?.data);
       setLoading(false);
     } catch (error) {
