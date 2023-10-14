@@ -1,4 +1,4 @@
-const BACKEND_URL = "http://31.129.110.196:8000";
+const BACKEND_URL = "http://inteacher-site.ru/";
 
 
 export default {BACKEND_URL}

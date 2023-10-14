@@ -19,11 +19,7 @@ function App() {
 
   const getData = async () => {
     try {
-      const res = await axios.get(env.BACKEND_URL+"/teachers", {
-        httpsAgent: new axios.https.Agent({
-          rejectUnauthorized: false
-        })
-      });
+      const res = await axios.get(env.BACKEND_URL);
       setData(res?.data);
       setLoading(false);
     } catch (error) {
