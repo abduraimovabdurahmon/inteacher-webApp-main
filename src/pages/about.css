@@ -1,0 +1,18 @@
+.about-box{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 2px 2px 20px #ccc;
+    border-radius: 24px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+
+.about-title{
+    font-size: larger;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-family: 'Young Serif', serif;
+}

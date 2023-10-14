@@ -7,41 +7,26 @@ import Button from "react-bootstrap/Button";
 import Card from "./Card";
 
 const MyPaginatin = (props) => {
-  const api = props?.api;
+  const api = props?.data;
 
   const [current, setCurrent] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [totalPages, setTotalpages] = useState(
     Math.ceil(api.length / pageSize)
   );
-//   const [startIndex, setStartindex] = useState((current - 1) * pageSize + 1);
-//   const [endIndex, setEndIndex] = useState(
-//     Math.min(startIndex + pageSize - 1, api.length)
-//   );
 
-  useEffect(() => {
-    console.log(current)
-  }, [current]);
 
   return (
     <>
         <div className="container">
             <div className="row">
-                {/* {Array.from({length: endIndex-startIndex+1}, (_, index)=>{
-                    return index+startIndex
-                }).map((el, index)=>{
-                    return (
-                        <div className="col-6">
-                            <Card></Card>
-                        </div>
-                    )
-                })} */}
+                
                 {Array.from({length: Math.min(10, api.length-((current-1)*10))}, (_, index)=>{
                     return ((current-1)*10)+1 + index;
                 }).map((el, index)=>{
                     return (
                         <div className="col-6" key={index}>
-                            <Card title = {el}/>
+                            <Card data = {props.data[index]}/>
                         </div>
                     )
                 })}
