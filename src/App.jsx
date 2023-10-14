@@ -15,13 +15,14 @@ const agent = new https.Agent({
 });
 
 
+
 function App() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
   const getData = async () => {
     try {
-      const res = await axios.get(env.BACKEND_URL+"/teachers", {httpsAgent: agent});
+      const res = await axios.get(env.BACKEND_URL+"/teachers", {httpAgent: agent});
       setData(res?.data);
       setLoading(false);
     } catch (error) {
