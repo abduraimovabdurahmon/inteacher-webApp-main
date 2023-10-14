@@ -44,10 +44,10 @@ function App() {
                 <div className="top">
                 <Routes>
                   <Route path="/">
-                    <Route index element={<Home data = {...data}/>} />
-                    <Route path="/categories" element={<Categories data = {...data}/>} />
+                    <Route index element={<Home data = {data}/>} />
+                    <Route path="/categories" element={<Categories data = {data}/>} />
                     <Route path="/about" element = {<About/>} />
-                    <Route path="/teacher/:id" element={<Details data = {...data}/>} />
+                    <Route path="/teacher/:id" element={<Details data = {data}/>} />
                   </Route>
                 </Routes>
                 </div>
