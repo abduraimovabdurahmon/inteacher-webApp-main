@@ -1,8 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import {TiArrowBack} from "react-icons/ti"
-import {MdTextsms, MdNumbers} from "react-icons/md"
-import {BsFillTelephoneFill} from "react-icons/bs"
+import {MdNumbers} from "react-icons/md"
 import {GiTeacher} from "react-icons/gi"
 import {BiSolidUserCircle} from "react-icons/bi"
 import {AiFillPhone} from "react-icons/ai"
@@ -29,18 +28,12 @@ const Details = (props) => {
         <div className="container details-body">
 
             <div className="details-body-card">
-                <div className="img-and-contact">
+                <div className="details-img">
                     <div className="details-body-card-img" style={{
                         backgroundImage: "url("+"https://img.youtube.com/vi/"+teacher?.photo+"/sddefault.jpg"+")",
                         backgroundPosition: "center",
                         backgroundSize: "cover"
                     }}></div>
-
-                    <div className="contact-icons">
-                        <a href={"sms:"+teacher?.phone+"?body=Assalomu%20alaykum,%20"}><MdTextsms className='contact-icon'/></a>
-                        <a href={"tel:"+teacher?.phone}><BsFillTelephoneFill className='contact-icon'/></a>
-                    </div>
-
                 </div>
                 
 
@@ -53,7 +46,7 @@ const Details = (props) => {
                 </div>
                     <hr />
                 <div className="details-video">
-                    <div className="details-video-title">Videodarslardan lavha</div>
+                    <div className="details-video-title h2 p-2">Videodarslardan lavha</div>
                     <iframe src={"https://www.youtube.com/embed/"+teacher.video} className='details-video-youtube'></iframe>
                 </div>
 
