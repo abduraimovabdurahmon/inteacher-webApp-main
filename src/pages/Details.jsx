@@ -30,7 +30,7 @@ const Details = (props) => {
             <div className="details-body-card">
                 <div className="details-img">
                     <div className="details-body-card-img" style={{
-                        backgroundImage: "url("+"https://img.youtube.com/vi/"+teacher?.photo+"/sddefault.jpg"+")",
+                        backgroundImage: "url("+teacher?.photo+")",
                         backgroundPosition: "center",
                         backgroundSize: "cover"
                     }}></div>

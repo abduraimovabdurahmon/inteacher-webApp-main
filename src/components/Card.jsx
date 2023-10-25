@@ -10,7 +10,7 @@ const Card = (props) => {
       <Link to = {"/teacher/"+props?.data?.id}>
         <div className="card-box">
             <div className="card-img" style={{
-                backgroundImage: "url("+"https://img.youtube.com/vi/"+props?.data?.photo+"/sddefault.jpg"+")",
+                backgroundImage: "url("+props?.data?.photo+")",
                 backgroundPosition: "center",
                 backgroundSize: "cover"
                 }}></div>
