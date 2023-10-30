@@ -4,8 +4,17 @@ import Card from '../components/Card'
 import MyPaginatin from '../components/MyPagination'
 
 
-const Home = (props) => {
+const Home =  (props) => {
 
+    const shuffle =  (data)=>{
+        let myData =  data;
+        for(let i=0; i<data.length; i++){
+            const random1 =  Math.floor(Math.random()*(data.length));            
+            const random2 =  Math.floor(Math.random()*(data.length));            
+            [myData[random1], myData[random2]] =  [myData[random2], myData[random1]];
+        }
+        return myData;
+    }
 
   return (
     <div>
@@ -26,7 +35,7 @@ const Home = (props) => {
         <div className="teachers-list container">
             <div className="teachers-list-title">All teachers</div>
             <div className="teachers-box">
-               <MyPaginatin data = {props.data}/>
+               <MyPaginatin data = {shuffle(props.data)}/>
             </div>
         </div>
         
